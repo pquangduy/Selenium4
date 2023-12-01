@@ -90,7 +90,9 @@ public class ExtentReportManager {
 	 */
 	public static void addScreenShot(Status status, String message) {
 		// String screenshotPath = ScreenshotHelpers.getScreenshotRelativePath(message);
-		String screenshotPath = "http://localhost:8080/job/Test1/ws/"
+//		String screenshotPath = "http://localhost:8080/job/Maven_LocalMachine/"
+//				+ ScreenshotHelpers.captureScreenshot(DriverManager.getDriver(), message);
+		String screenshotPath = "http://localhost:8080/job/Maven_Git/ws/"
 				+ ScreenshotHelpers.captureScreenshot(DriverManager.getDriver(), message);
 		ExtentTestManager.getExtentTest().log(status,
 				MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());

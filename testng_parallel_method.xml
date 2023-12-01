@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Parallel Execution with methods" thread-count="2">
+	<test name="Parallel Tests" parallel="methods">
+		<classes>
+			<class name="session2.com.testcases.LoginAppWithPageFactoryTest" />
+		</classes>
+	</test>
+</suite> <!-- Suite -->

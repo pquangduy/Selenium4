@@ -1,0 +1,8 @@
+{
+  "mysql_database": {
+		"hostname": "localhost",
+		"dbName": "testdb",
+		"dbUserName": "root",
+		"dbPassword": "Test@12345"
+	}
+}

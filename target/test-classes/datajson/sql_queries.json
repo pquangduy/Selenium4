@@ -1,0 +1,6 @@
+{
+  "sql_select": "select * from employee;",
+  "sql_update": "update employee set salary=29000 where name='JOHN'",
+  "sql_insert": "insert into employee values ('Neymar', 19000);",
+  "sql_delete": "delete from employee where name='Lionel';"
+}

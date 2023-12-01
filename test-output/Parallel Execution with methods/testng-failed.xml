@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite thread-count="2" parallel="tests" name="Failed suite [Parallel Execution with methods]" guice-stage="DEVELOPMENT">
+  <test thread-count="2" parallel="tests" name="ParallelExecutionTest2(failed)">
+    <classes>
+      <class name="session2.com.testcases.TestTwoWithStaticWebDriver">
+        <methods>
+          <include name="tearDown"/>
+          <include name="MyntraTest" invocation-numbers="0"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- session2.com.testcases.TestTwoWithStaticWebDriver -->
+    </classes>
+  </test> <!-- ParallelExecutionTest2(failed) -->
+</suite> <!-- Failed suite [Parallel Execution with methods] -->

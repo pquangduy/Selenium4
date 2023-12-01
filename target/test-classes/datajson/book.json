@@ -1,0 +1,37 @@
+{
+	"id": 1,
+    "title": "Casino Royale",
+    "director": "Martin Campbell",
+    "starring": [
+         "Daniel Craig",
+         "Eva Green"
+    ],
+   "book": [
+      {
+         "title": "Beginning JSON",
+         "author": "Ben Smith",
+         "price": 49.99
+      },
+      {
+         "title": "JSON at Work",
+         "author": "Tom Marrs",
+         "price": 29.99
+      },
+      {
+         "title": "Learn JSON in a DAY",
+         "author": "Acodemy",
+         "price": 8.99
+      },
+      {
+         "title": "JSON: Questions and Answers",
+         "author": "George Duckett",
+         "price": 6.00
+      }
+   ],
+   "price range": {
+      "cheap": 10.00,
+      "medium": 20.00
+   },
+   "b1": true,
+   "n1": null
+}

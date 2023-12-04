@@ -15,6 +15,7 @@ public class BaseTest {
 	@BeforeMethod(alwaysRun = true)
 	public void createDriver(@Optional("chrome") String browser) {
 		System.setProperty("webdriver.http.factory", "jdk-http-client");
+		System.out.println("----- Browser: " + browser);
 		WebDriver driver = ThreadGuard.protect(new TargetFactory().createInstance(browser));
 		DriverManager.setDriver(driver);
 		driver.manage().window().maximize();

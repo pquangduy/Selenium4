@@ -1,17 +1,17 @@
 -------------------------------------------------------------------------------
 Test set: TestSuite
 -------------------------------------------------------------------------------
-Tests run: 6, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 23.808 s <<< FAILURE! - in TestSuite
-testElementNotInteractableExceptionHandling_usingSeleniumClick(session4.com.testcases.ListenerTest)  Time elapsed: 2.03 s  <<< FAILURE!
+Tests run: 6, Failures: 1, Errors: 0, Skipped: 2, Time elapsed: 25.167 s <<< FAILURE! - in TestSuite
+testElementNotInteractableExceptionHandling_usingSeleniumClick(session4.com.testcases.ListenerTest)  Time elapsed: 2.508 s  <<< FAILURE!
 org.openqa.selenium.ElementNotInteractableException: 
 element not interactable
   (Session info: chrome=119.0.6045.200)
 Build info: version: '4.13.0', revision: 'ba948ece5b*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [19f7e664c0f698318deb0ee2a2e65c1a, clickElement {id=EB5D1AB72E7BB1AEF0982429BB8EB525_element_15}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.200, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62008}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62008/devtoo..., se:cdpVersion: 119.0.6045.200, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (19f7e664c0f698318deb0ee2a2e65c1a)] -> xpath: //label[@for='persistent']//preceding-sibling::input]
-Session ID: 19f7e664c0f698318deb0ee2a2e65c1a
+Command: [adf06f2c0fb6666cf5d2a1b244087b29, clickElement {id=D3DA15789F5FCDE1DCF4470F7C08D228_element_15}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.200, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62540}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62540/devtoo..., se:cdpVersion: 119.0.6045.200, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (adf06f2c0fb6666cf5d2a1b244087b29)] -> xpath: //label[@for='persistent']//preceding-sibling::input]
+Session ID: adf06f2c0fb6666cf5d2a1b244087b29
 	at session4.com.testcases.ListenerTest.testElementNotInteractableExceptionHandling_usingSeleniumClick(ListenerTest.java:17)
 

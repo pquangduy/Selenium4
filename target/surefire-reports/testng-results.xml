@@ -2,12 +2,12 @@
 <testng-results ignored="0" total="6" passed="3" failed="1" skipped="2">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-04T08:33:30 ICT" name="Suite" finished-at="2023-12-04T08:33:52 ICT" duration-ms="21917">
+  <suite started-at="2023-12-04T08:42:29 ICT" name="Suite" finished-at="2023-12-04T08:42:53 ICT" duration-ms="23210">
     <groups>
     </groups>
-    <test started-at="2023-12-04T08:33:30 ICT" name="Test" finished-at="2023-12-04T08:33:52 ICT" duration-ms="21917">
+    <test started-at="2023-12-04T08:42:29 ICT" name="Test" finished-at="2023-12-04T08:42:53 ICT" duration-ms="23210">
       <class name="session4.com.testcases.ListenerTest_SuiteLevel">
-        <test-method is-config="true" signature="createDriver(java.lang.String)[pri:0, instance:session4.com.testcases.ListenerTest_SuiteLevel@4b86805d]" started-at="2023-12-04T08:33:40 ICT" name="createDriver" finished-at="2023-12-04T08:33:41 ICT" duration-ms="751" status="PASS">
+        <test-method is-config="true" signature="createDriver(java.lang.String)[pri:0, instance:session4.com.testcases.ListenerTest_SuiteLevel@4b86805d]" started-at="2023-12-04T08:42:40 ICT" name="createDriver" finished-at="2023-12-04T08:42:41 ICT" duration-ms="1137" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,7 +18,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createDriver -->
-        <test-method signature="testStaleElementReferenceExceptionHandling_skipTestCase()[pri:0, instance:session4.com.testcases.ListenerTest_SuiteLevel@4b86805d]" started-at="2023-12-04T08:33:41 ICT" name="testStaleElementReferenceExceptionHandling_skipTestCase" finished-at="2023-12-04T08:33:41 ICT" duration-ms="1" status="SKIP">
+        <test-method signature="testStaleElementReferenceExceptionHandling_skipTestCase()[pri:0, instance:session4.com.testcases.ListenerTest_SuiteLevel@4b86805d]" started-at="2023-12-04T08:42:41 ICT" name="testStaleElementReferenceExceptionHandling_skipTestCase" finished-at="2023-12-04T08:42:41 ICT" duration-ms="3" status="SKIP">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[Test voluntarily skipped.]]>
@@ -64,11 +64,11 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testStaleElementReferenceExceptionHandling_skipTestCase -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:session4.com.testcases.ListenerTest_SuiteLevel@4b86805d]" started-at="2023-12-04T08:33:41 ICT" name="closeDriver" finished-at="2023-12-04T08:33:41 ICT" duration-ms="120" status="PASS">
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:session4.com.testcases.ListenerTest_SuiteLevel@4b86805d]" started-at="2023-12-04T08:42:41 ICT" name="closeDriver" finished-at="2023-12-04T08:42:42 ICT" duration-ms="120" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
-        <test-method is-config="true" signature="createDriver(java.lang.String)[pri:0, instance:session4.com.testcases.ListenerTest_SuiteLevel@4b86805d]" started-at="2023-12-04T08:33:41 ICT" name="createDriver" finished-at="2023-12-04T08:33:42 ICT" duration-ms="748" status="PASS">
+        <test-method is-config="true" signature="createDriver(java.lang.String)[pri:0, instance:session4.com.testcases.ListenerTest_SuiteLevel@4b86805d]" started-at="2023-12-04T08:42:42 ICT" name="createDriver" finished-at="2023-12-04T08:42:42 ICT" duration-ms="768" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -79,15 +79,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createDriver -->
-        <test-method signature="testStaleElementReferenceExceptionHandling_usingExplicitWait()[pri:0, instance:session4.com.testcases.ListenerTest_SuiteLevel@4b86805d]" started-at="2023-12-04T08:33:42 ICT" name="testStaleElementReferenceExceptionHandling_usingExplicitWait" finished-at="2023-12-04T08:33:46 ICT" duration-ms="4509" status="PASS">
+        <test-method signature="testStaleElementReferenceExceptionHandling_usingExplicitWait()[pri:0, instance:session4.com.testcases.ListenerTest_SuiteLevel@4b86805d]" started-at="2023-12-04T08:42:42 ICT" name="testStaleElementReferenceExceptionHandling_usingExplicitWait" finished-at="2023-12-04T08:42:47 ICT" duration-ms="4534" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testStaleElementReferenceExceptionHandling_usingExplicitWait -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:session4.com.testcases.ListenerTest_SuiteLevel@4b86805d]" started-at="2023-12-04T08:33:46 ICT" name="closeDriver" finished-at="2023-12-04T08:33:46 ICT" duration-ms="121" status="PASS">
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:session4.com.testcases.ListenerTest_SuiteLevel@4b86805d]" started-at="2023-12-04T08:42:47 ICT" name="closeDriver" finished-at="2023-12-04T08:42:47 ICT" duration-ms="123" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
-        <test-method is-config="true" signature="createDriver(java.lang.String)[pri:0, instance:session4.com.testcases.ListenerTest_SuiteLevel@4b86805d]" started-at="2023-12-04T08:33:46 ICT" name="createDriver" finished-at="2023-12-04T08:33:47 ICT" duration-ms="746" status="PASS">
+        <test-method is-config="true" signature="createDriver(java.lang.String)[pri:0, instance:session4.com.testcases.ListenerTest_SuiteLevel@4b86805d]" started-at="2023-12-04T08:42:47 ICT" name="createDriver" finished-at="2023-12-04T08:42:48 ICT" duration-ms="947" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -98,17 +98,17 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createDriver -->
-        <test-method signature="testStaleElementReferenceExceptionHandling_usingTryCatch()[pri:0, instance:session4.com.testcases.ListenerTest_SuiteLevel@4b86805d]" started-at="2023-12-04T08:33:47 ICT" name="testStaleElementReferenceExceptionHandling_usingTryCatch" finished-at="2023-12-04T08:33:52 ICT" duration-ms="4560" status="PASS">
+        <test-method signature="testStaleElementReferenceExceptionHandling_usingTryCatch()[pri:0, instance:session4.com.testcases.ListenerTest_SuiteLevel@4b86805d]" started-at="2023-12-04T08:42:48 ICT" name="testStaleElementReferenceExceptionHandling_usingTryCatch" finished-at="2023-12-04T08:42:52 ICT" duration-ms="4478" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testStaleElementReferenceExceptionHandling_usingTryCatch -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:session4.com.testcases.ListenerTest_SuiteLevel@4b86805d]" started-at="2023-12-04T08:33:52 ICT" name="closeDriver" finished-at="2023-12-04T08:33:52 ICT" duration-ms="125" status="PASS">
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:session4.com.testcases.ListenerTest_SuiteLevel@4b86805d]" started-at="2023-12-04T08:42:52 ICT" name="closeDriver" finished-at="2023-12-04T08:42:53 ICT" duration-ms="122" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
       </class> <!-- session4.com.testcases.ListenerTest_SuiteLevel -->
       <class name="session4.com.testcases.ListenerTest">
-        <test-method is-config="true" signature="createDriver(java.lang.String)[pri:0, instance:session4.com.testcases.ListenerTest@24105dc5]" started-at="2023-12-04T08:33:30 ICT" name="createDriver" finished-at="2023-12-04T08:33:32 ICT" duration-ms="1754" status="PASS">
+        <test-method is-config="true" signature="createDriver(java.lang.String)[pri:0, instance:session4.com.testcases.ListenerTest@24105dc5]" started-at="2023-12-04T08:42:29 ICT" name="createDriver" finished-at="2023-12-04T08:42:31 ICT" duration-ms="1850" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -119,15 +119,15 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createDriver -->
-        <test-method signature="testElementNotInteractableExceptionHandling_usingJavascriptClick()[pri:0, instance:session4.com.testcases.ListenerTest@24105dc5]" started-at="2023-12-04T08:33:32 ICT" name="testElementNotInteractableExceptionHandling_usingJavascriptClick" finished-at="2023-12-04T08:33:36 ICT" duration-ms="3914" status="PASS">
+        <test-method signature="testElementNotInteractableExceptionHandling_usingJavascriptClick()[pri:0, instance:session4.com.testcases.ListenerTest@24105dc5]" started-at="2023-12-04T08:42:31 ICT" name="testElementNotInteractableExceptionHandling_usingJavascriptClick" finished-at="2023-12-04T08:42:36 ICT" duration-ms="4207" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testElementNotInteractableExceptionHandling_usingJavascriptClick -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:session4.com.testcases.ListenerTest@24105dc5]" started-at="2023-12-04T08:33:36 ICT" name="closeDriver" finished-at="2023-12-04T08:33:36 ICT" duration-ms="157" status="PASS">
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:session4.com.testcases.ListenerTest@24105dc5]" started-at="2023-12-04T08:42:36 ICT" name="closeDriver" finished-at="2023-12-04T08:42:36 ICT" duration-ms="151" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
-        <test-method is-config="true" signature="createDriver(java.lang.String)[pri:0, instance:session4.com.testcases.ListenerTest@24105dc5]" started-at="2023-12-04T08:33:36 ICT" name="createDriver" finished-at="2023-12-04T08:33:37 ICT" duration-ms="1109" status="PASS">
+        <test-method is-config="true" signature="createDriver(java.lang.String)[pri:0, instance:session4.com.testcases.ListenerTest@24105dc5]" started-at="2023-12-04T08:42:36 ICT" name="createDriver" finished-at="2023-12-04T08:42:36 ICT" duration-ms="747" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -138,7 +138,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createDriver -->
-        <test-method signature="testElementNotInteractableExceptionHandling_usingSeleniumClick()[pri:0, instance:session4.com.testcases.ListenerTest@24105dc5]" started-at="2023-12-04T08:33:37 ICT" name="testElementNotInteractableExceptionHandling_usingSeleniumClick" finished-at="2023-12-04T08:33:39 ICT" duration-ms="1831" status="FAIL">
+        <test-method signature="testElementNotInteractableExceptionHandling_usingSeleniumClick()[pri:0, instance:session4.com.testcases.ListenerTest@24105dc5]" started-at="2023-12-04T08:42:36 ICT" name="testElementNotInteractableExceptionHandling_usingSeleniumClick" finished-at="2023-12-04T08:42:39 ICT" duration-ms="2302" status="FAIL">
           <exception class="org.openqa.selenium.ElementNotInteractableException">
             <message>
               <![CDATA[element not interactable
@@ -146,10 +146,10 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
 Build info: version: '4.13.0', revision: 'ba948ece5b*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [19f7e664c0f698318deb0ee2a2e65c1a, clickElement {id=EB5D1AB72E7BB1AEF0982429BB8EB525_element_15}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.200, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62008}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62008/devtoo..., se:cdpVersion: 119.0.6045.200, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (19f7e664c0f698318deb0ee2a2e65c1a)] -> xpath: //label[@for='persistent']//preceding-sibling::input]
-Session ID: 19f7e664c0f698318deb0ee2a2e65c1a]]>
+Command: [adf06f2c0fb6666cf5d2a1b244087b29, clickElement {id=D3DA15789F5FCDE1DCF4470F7C08D228_element_15}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.200, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62540}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62540/devtoo..., se:cdpVersion: 119.0.6045.200, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (adf06f2c0fb6666cf5d2a1b244087b29)] -> xpath: //label[@for='persistent']//preceding-sibling::input]
+Session ID: adf06f2c0fb6666cf5d2a1b244087b29]]>
             </message>
             <full-stacktrace>
               <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
@@ -157,10 +157,10 @@ Session ID: 19f7e664c0f698318deb0ee2a2e65c1a]]>
 Build info: version: '4.13.0', revision: 'ba948ece5b*'
 System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '17.0.6'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [19f7e664c0f698318deb0ee2a2e65c1a, clickElement {id=EB5D1AB72E7BB1AEF0982429BB8EB525_element_15}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.200, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62008}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62008/devtoo..., se:cdpVersion: 119.0.6045.200, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (19f7e664c0f698318deb0ee2a2e65c1a)] -> xpath: //label[@for='persistent']//preceding-sibling::input]
-Session ID: 19f7e664c0f698318deb0ee2a2e65c1a
+Command: [adf06f2c0fb6666cf5d2a1b244087b29, clickElement {id=D3DA15789F5FCDE1DCF4470F7C08D228_element_15}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.200, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62540}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62540/devtoo..., se:cdpVersion: 119.0.6045.200, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (adf06f2c0fb6666cf5d2a1b244087b29)] -> xpath: //label[@for='persistent']//preceding-sibling::input]
+Session ID: adf06f2c0fb6666cf5d2a1b244087b29
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
@@ -214,11 +214,11 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testElementNotInteractableExceptionHandling_usingSeleniumClick -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:session4.com.testcases.ListenerTest@24105dc5]" started-at="2023-12-04T08:33:39 ICT" name="closeDriver" finished-at="2023-12-04T08:33:39 ICT" duration-ms="122" status="PASS">
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:session4.com.testcases.ListenerTest@24105dc5]" started-at="2023-12-04T08:42:39 ICT" name="closeDriver" finished-at="2023-12-04T08:42:39 ICT" duration-ms="181" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->
-        <test-method is-config="true" signature="createDriver(java.lang.String)[pri:0, instance:session4.com.testcases.ListenerTest@24105dc5]" started-at="2023-12-04T08:33:39 ICT" name="createDriver" finished-at="2023-12-04T08:33:40 ICT" duration-ms="754" status="PASS">
+        <test-method is-config="true" signature="createDriver(java.lang.String)[pri:0, instance:session4.com.testcases.ListenerTest@24105dc5]" started-at="2023-12-04T08:42:39 ICT" name="createDriver" finished-at="2023-12-04T08:42:40 ICT" duration-ms="881" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -229,7 +229,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- createDriver -->
-        <test-method signature="testSkipTestCase()[pri:0, instance:session4.com.testcases.ListenerTest@24105dc5]" started-at="2023-12-04T08:33:40 ICT" name="testSkipTestCase" finished-at="2023-12-04T08:33:40 ICT" duration-ms="2" status="SKIP">
+        <test-method signature="testSkipTestCase()[pri:0, instance:session4.com.testcases.ListenerTest@24105dc5]" started-at="2023-12-04T08:42:40 ICT" name="testSkipTestCase" finished-at="2023-12-04T08:42:40 ICT" duration-ms="4" status="SKIP">
           <exception class="org.testng.SkipException">
             <message>
               <![CDATA[Test voluntarily skipped.]]>
@@ -275,7 +275,7 @@ at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- testSkipTestCase -->
-        <test-method is-config="true" signature="closeDriver()[pri:0, instance:session4.com.testcases.ListenerTest@24105dc5]" started-at="2023-12-04T08:33:40 ICT" name="closeDriver" finished-at="2023-12-04T08:33:40 ICT" duration-ms="132" status="PASS">
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:session4.com.testcases.ListenerTest@24105dc5]" started-at="2023-12-04T08:42:40 ICT" name="closeDriver" finished-at="2023-12-04T08:42:40 ICT" duration-ms="155" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeDriver -->

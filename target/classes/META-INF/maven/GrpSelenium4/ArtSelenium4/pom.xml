@@ -186,9 +186,7 @@
 					<version>2.22.1</version>
 					<configuration>
 						<suiteXmlFiles>
-							<!--
-							<suiteXmlFile>testng_listener.xml</suiteXmlFile>
-						-->
+							<!--<suiteXmlFile>testng_listener.xml</suiteXmlFile>-->
 							<suiteXmlFile>${xmlFiles}</suiteXmlFile>
 						</suiteXmlFiles>
 						<systemPropertyVariables>

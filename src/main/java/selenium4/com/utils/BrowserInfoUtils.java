@@ -13,18 +13,31 @@ public final class BrowserInfoUtils {
 	private static final String OS = System.getProperty("os.name").toLowerCase();
 
     public static String getBrowserInfo() {
-    	String xx = System.getProperty("BROWSER").toLowerCase();
-    	System.out.println("----xx is : " + xx);
-        String browser = "";
-        String browserInfo = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("BROWSER");
-        System.out.println("----Browser Info is : " + browserInfo);
-        if (Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("BROWSER") == null) {
-            browser = BROWSER.toUpperCase();
-            System.out.println("----Browser Info 11 is : " + browser);
-        } else {
-            browser = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("BROWSER").trim().toUpperCase();
+    	String browser;
+    	if (System.getProperty("BROWSER") != null) {
+    		browser = System.getProperty("BROWSER").toUpperCase();
+    		System.out.println("----Browser Info 11 is : " + browser);
+    	}
+    	else if (Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("BROWSER") != null) {
+            browser = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("BROWSER").trim().toUpperCase();   
             System.out.println("----Browser Info 22 is : " + browser);
-        }
+    	}
+    	else {
+    		browser = BROWSER.toUpperCase();
+    		System.out.println("----Browser Info 33 is : " + browser);
+    	}
+//    	String xx = System.getProperty("BROWSER").toLowerCase();
+//    	System.out.println("----xx is : " + xx);
+//        //String browser = "";
+//        String browserInfo = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("BROWSER");
+//        System.out.println("----Browser Info is : " + browserInfo);
+//        if (Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("BROWSER") == null) {
+//            browser = BROWSER.toUpperCase();
+//            System.out.println("----Browser Info 11 is : " + browser);
+//        } else {
+//            browser = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("BROWSER").trim().toUpperCase();
+//            System.out.println("----Browser Info 22 is : " + browser);
+//        }
         return browser;
     }
 

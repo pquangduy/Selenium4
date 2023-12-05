@@ -192,7 +192,7 @@
 							<suiteXmlFile>${xmlFiles}</suiteXmlFile>
 						</suiteXmlFiles>
 						<systemPropertyVariables>
-							<executionBrowser>${browser}</executionBrowser>
+							<executionBrowser>${BROWSER}</executionBrowser>
 						</systemPropertyVariables>
 					</configuration>
 				</plugin>

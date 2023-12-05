@@ -14,6 +14,8 @@ public final class BrowserInfoUtils {
 
     public static String getBrowserInfo() {
         String browser = "";
+        String browserInfo = Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("BROWSER");
+        System.out.println("----Browser Info is : " + browserInfo);
         if (Reporter.getCurrentTestResult().getTestContext().getCurrentXmlTest().getParameter("BROWSER") == null) {
             browser = BROWSER.toUpperCase();
         } else {

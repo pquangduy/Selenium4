@@ -22,8 +22,9 @@ public class ScreenshotHelpers {
 	public static String captureScreenshot(WebDriver driver, String screenName) {
 		try {
 			//String path = "http://localhost:8080/job/Jenkin_Git_Parameter1/ws/" + FrameworkConstants.EXPORT_CAPTURE_PATH;
-			//String path = Helpers.getCurrentDir() + FrameworkConstants.EXPORT_CAPTURE_PATH;
-			String path = FrameworkConstants.EXPORT_CAPTURE_PATH;
+			String aa = FrameworkConstants.PROJECT_PATH;
+			System.out.println("-----aa: " + aa);
+			String path = Helpers.getCurrentDir() + FrameworkConstants.EXPORT_CAPTURE_PATH;
 			File file = new File(path);
 			if (!file.exists()) {
 				LogUtils.info("No Folder: " + path);

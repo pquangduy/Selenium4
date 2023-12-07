@@ -187,7 +187,7 @@
 					<configuration>
 						<suiteXmlFiles>
 							<!--<suiteXmlFile>testng_listener.xml</suiteXmlFile>-->
-							<suiteXmlFile>${xmlFiles}</suiteXmlFile>
+							<suiteXmlFile>${XMLFILE}</suiteXmlFile>
 						</suiteXmlFiles>
 						<systemPropertyVariables>
 							<executionBrowser>${BROWSER}</executionBrowser>

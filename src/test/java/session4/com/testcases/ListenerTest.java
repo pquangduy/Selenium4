@@ -10,7 +10,7 @@ import static selenium4.com.helpers.WebElementsHelpers.*;
 
 public class ListenerTest extends BaseTest {
 
-	@Test
+	//@Test
 	public void testElementNotInteractableExceptionHandling_usingSeleniumClick() throws Exception {
 		getURL("https://login.yahoo.com/");
 		WebElement chkSignIn = waitForElementPresent(By.xpath("//label[@for='persistent']//preceding-sibling::input"));

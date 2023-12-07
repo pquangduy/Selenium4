@@ -14,7 +14,6 @@ import selenium4.com.listeners.TestListener;
 
 //@Listeners({TestListener.class})
 public class BaseTest {
-	//@Parameters("BROWSER")
 	@BeforeMethod(alwaysRun = true)
 	public void createDriver() {
 		String browser;
@@ -24,7 +23,7 @@ public class BaseTest {
 		} else {
 			browser = BROWSER.toLowerCase();
 		}
-		System.out.println("----- Browser: " + browser);
+		System.out.println("----- Browser in BeforeMethod: " + browser);
 		WebDriver driver = ThreadGuard.protect(new TargetFactory().createInstance(browser));
 		DriverManager.setDriver(driver);
 		driver.manage().window().maximize();

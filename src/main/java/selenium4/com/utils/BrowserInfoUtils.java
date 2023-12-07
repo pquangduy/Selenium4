@@ -25,7 +25,7 @@ public final class BrowserInfoUtils {
 		} else {
 			browser = BROWSER.toUpperCase();
 		}
-		System.out.println("----Browser is : " + browser);
+		System.out.println("----Browser in getBrowserInfo is : " + browser);
 
 		return browser;
 	}

@@ -53,7 +53,7 @@ public class ListenerTest_SuiteLevel extends BaseTest {
 		sleep(1);
 	}
 	
-	@Test
+	//@Test
 	public void testStaleElementReferenceExceptionHandling_skipTestCase() throws Exception {
 		throw new SkipException("Test voluntarily skipped.");
 	}

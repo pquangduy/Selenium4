@@ -44,7 +44,7 @@ public class ListenerTest extends BaseTest {
 		}
 	}
 
-	@Test
+	//@Test
 	public void testSkipTestCase() throws Exception {
 		throw new SkipException("Test voluntarily skipped.");
 	}

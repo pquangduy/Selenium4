@@ -5,7 +5,7 @@
     </listeners>
     <test name="Test">
         <classes>
-            <class name="session4.com.testcases.ListenerTest"></class>
+            <class name="session4.com.testcases.ListenerTest_ClassLevel"></class>
             <class name="session4.com.testcases.ListenerTest_SuiteLevel"></class>
         </classes>
     </test>

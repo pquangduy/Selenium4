@@ -1,6 +1,8 @@
 package selenium4.com.reports;
 
 import static selenium4.com.constants.FrameworkConstants.*;
+
+import selenium4.com.constants.FrameworkConstants;
 import selenium4.com.driver.DriverManager;
 import selenium4.com.enums.AuthorType;
 import selenium4.com.enums.CategoryType;
@@ -89,9 +91,8 @@ public class ExtentReportManager {
 	 * @param message the message
 	 */
 	public static void addScreenShot(Status status, String message) {
-		// String screenshotPath = ScreenshotHelpers.getScreenshotRelativePath(message);
-		//String screenshotPath = "http://localhost:8080/job/Maven_LocalMachine/ws/" + ScreenshotHelpers.captureScreenshot(DriverManager.getDriver(), message);
-		//String screenshotPath = "http://localhost:8080/job/Maven_Git/ws/" + ScreenshotHelpers.captureScreenshot(DriverManager.getDriver(), message);
+		//String screenshotPath = FrameworkConstants.PROJECT_PATH + ScreenshotHelpers.getScreenshotRelativePath(message);
+		//String screenshotPath = FrameworkConstants.PROJECT_PATH + ScreenshotHelpers.captureScreenshot(DriverManager.getDriver(), message);
 		String screenshotPath = "http://localhost:8080/job/Jenkin_Git_Parameter1/ws/" + ScreenshotHelpers.captureScreenshot(DriverManager.getDriver(), message);
 		ExtentTestManager.getExtentTest().log(status,
 				MediaEntityBuilder.createScreenCaptureFromPath(screenshotPath).build());

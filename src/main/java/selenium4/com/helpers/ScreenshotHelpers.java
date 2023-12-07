@@ -28,7 +28,6 @@ public class ScreenshotHelpers {
 				file.mkdir();
 				LogUtils.info("Folder created: " + file);
 			}
-
 			LogUtils.info("Driver for Screenshot: " + driver);
 			// Tạo tham chiếu của TakesScreenshot
 			TakesScreenshot ts = (TakesScreenshot) driver;
@@ -39,7 +38,6 @@ public class ScreenshotHelpers {
 					new File(path + "/" + screenName + "_" + dateFormat.format(new Date()) + ".png"));
 			LogUtils.info("Screenshot taken: " + screenName);
 			LogUtils.info("Screenshot taken current URL: " + driver.getCurrentUrl());
-
 			String filePathRelative = FrameworkConstants.EXPORT_CAPTURE_PATH + File.separator + screenName + "_"
 					+ dateFormat.format(new Date()) + ".png";
 			return filePathRelative;
@@ -59,16 +57,12 @@ public class ScreenshotHelpers {
 		} catch (AWTException e) {
 			throw new RuntimeException(e);
 		}
-
 		String path = Helpers.getCurrentDir() + FrameworkConstants.EXPORT_CAPTURE_PATH;
-		// String path = Helpers.getCurrentDir() +
-		// FrameworkConstants.EXTENT_REPORT_FOLDER + File.separator + "images";
 		File folder = new File(path);
 		if (!folder.exists()) {
 			folder.mkdir();
 			LogUtils.info("Folder created: " + folder);
 		}
-
 		String filePath = path + File.separator + screenshotName + dateName + ".png";
 		File file = new File(filePath);
 		try {
@@ -88,30 +82,21 @@ public class ScreenshotHelpers {
 		} catch (AWTException e) {
 			throw new RuntimeException(e);
 		}
-
 		String path = Helpers.getCurrentDir() + FrameworkConstants.EXPORT_CAPTURE_PATH;
-		// String path = Helpers.getCurrentDir() +
-		// FrameworkConstants.EXTENT_REPORT_FOLDER + File.separator + "images";
-
 		File folder = new File(path);
 		if (!folder.exists()) {
 			folder.mkdir();
 			LogUtils.info("Folder created: " + folder);
 		}
-
 		String filePath = path + File.separator + screenshotName + dateName + ".png";
-
 		File file = new File(filePath);
 		try {
 			ImageIO.write(image, "PNG", file);
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
-
 		String filePathRelative = FrameworkConstants.EXPORT_CAPTURE_PATH + File.separator + screenshotName + dateName
 				+ ".png";
-//		String filePathRelative = FrameworkConstants.EXTENT_REPORT_FOLDER + File.separator + "images" + File.separator
-//				+ screenshotName + dateName + ".png";
 		return filePathRelative;
 	}
 
@@ -124,19 +109,13 @@ public class ScreenshotHelpers {
 		} catch (AWTException e) {
 			throw new RuntimeException(e);
 		}
-
 		String path = Helpers.getCurrentDir() + FrameworkConstants.EXPORT_CAPTURE_PATH;
-		// String path = Helpers.getCurrentDir() +
-		// FrameworkConstants.EXTENT_REPORT_FOLDER + File.separator + "images";
-
 		File folder = new File(path);
 		if (!folder.exists()) {
 			folder.mkdir();
 			LogUtils.info("Folder created: " + folder);
 		}
-
 		String filePath = path + File.separator + screenshotName + dateName + ".png";
-
 		File file = new File(filePath);
 		try {
 			ImageIO.write(image, "PNG", file);

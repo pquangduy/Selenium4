@@ -18,6 +18,7 @@ import org.testng.*;
 import java.awt.*;
 import java.io.IOException;
 
+//public class TestListener implements ITestListener, ISuiteListener, IInvokedMethodListener {
 public class TestListener implements ITestListener, ISuiteListener, IInvokedMethodListener {
 
 	static int count_totalTCs;

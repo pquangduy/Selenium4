@@ -6,46 +6,46 @@ import org.testng.SkipException;
 import org.testng.annotations.Test;
 
 import selenium4.com.common.BaseTest;
-import selenium4.com.utils.LogUtils;
 import static selenium4.com.helpers.WebElementsHelpers.*;
 
-public class LoggingTest extends BaseTest {
+public class ListenerTest_ClassLevel extends BaseTest {
 
 	@Test
-	public void testElementNotInteractableExceptionHandling_usingSeleniumClick() throws Exception {
-		LogUtils.info("--- Test case: testElementNotInteractableExceptionHandling_usingSeleniumClick");
+	public void testTestCase_Fail() throws Exception {
 		getURL("https://login.yahoo.com/");
-		
 		WebElement chkSignIn = waitForElementPresent(By.xpath("//label[@for='persistent']//preceding-sibling::input"));
-		LogUtils.info(" --- click element and get org.openqa.selenium.ElementNotInteractableException: element not interactable");
 		chkSignIn.click();
 		if (chkSignIn.isSelected()) {
 			System.out.println("Checkbox is checked");
 		} else {
 			System.out.println("Checkbox is not checked");
-		}			
+		}
 	}
 
 	@Test
-	public void testElementNotInteractableExceptionHandling_usingJavascriptClick() throws Exception {
-		LogUtils.info("--- Test case: testElementNotInteractableExceptionHandling_usingJavascriptClick");
+	public void testTestCase_Pass() throws Exception {
 		getURL("https://login.yahoo.com/");
 
 		By bySignIn = By.xpath("//label[@for='persistent']//preceding-sibling::input");
 		WebElement chkSignIn = waitForElementPresent(bySignIn);
 		clickElementWithJs(bySignIn);
-		System.out.println("--Checkbox is clicked");
 		if (chkSignIn.isSelected()) {
 			System.out.println("Checkbox is checked");
 		} else {
 			System.out.println("Checkbox is not checked");
 		}
 		sleep(1);
+
+		clickElementWithJs(bySignIn);
+		if (chkSignIn.isSelected()) {
+			System.out.println("Checkbox is checked");
+		} else {
+			System.out.println("Checkbox is not checked");
+		}
 	}
-	
+
 	@Test
-	public void testSkipTestCase() throws Exception {
-		LogUtils.warn("Test case: testSkipTestCase is skipped");
+	public void testTestCase_Skip() throws Exception {
 		throw new SkipException("Test voluntarily skipped.");
 	}
 }

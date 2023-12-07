@@ -23,7 +23,7 @@ public class BaseTest {
 		} else {
 			browser = BROWSER.toLowerCase();
 		}
-		System.out.println("----- Browser in BeforeMethod: " + browser);
+		//System.out.println("----- Browser in BeforeMethod: " + browser);
 		WebDriver driver = ThreadGuard.protect(new TargetFactory().createInstance(browser));
 		DriverManager.setDriver(driver);
 		driver.manage().window().maximize();

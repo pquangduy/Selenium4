@@ -12,7 +12,7 @@ import selenium4.com.driver.TargetFactory;
 import selenium4.com.helpers.PropertiesHelpers;
 import selenium4.com.listeners.TestListener;
 
-//@Listeners({TestListener.class})
+@Listeners({TestListener.class})
 public class BaseTest {
 	@BeforeMethod(alwaysRun = true)
 	public void createDriver() {

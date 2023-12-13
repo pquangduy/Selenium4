@@ -3,22 +3,23 @@
 <suite name="Failed suite [Suite]" guice-stage="DEVELOPMENT" verbose="0">
   <listeners>
     <listener class-name="selenium4.com.listeners.TestListener"/>
+    <listener class-name="selenium4.com.listeners.TestAllureListener"/>
   </listeners>
   <test thread-count="5" name="Test(failed)" verbose="0">
     <classes>
-      <class name="session4.com.testcases.ListenerTest">
+      <class name="session4.com.testcases.ListenerTest_ClassLevel">
         <methods>
           <include name="createDriver"/>
           <include name="closeDriver"/>
-          <include name="testElementNotInteractableExceptionHandling_usingSeleniumClick"/>
-          <include name="testSkipTestCase"/>
+          <include name="testTestCase_Skip"/>
+          <include name="testTestCase_Fail"/>
         </methods>
-      </class> <!-- session4.com.testcases.ListenerTest -->
+      </class> <!-- session4.com.testcases.ListenerTest_ClassLevel -->
       <class name="session4.com.testcases.ListenerTest_SuiteLevel">
         <methods>
           <include name="createDriver"/>
           <include name="closeDriver"/>
-          <include name="testStaleElementReferenceExceptionHandling_skipTestCase"/>
+          <include name="testStaleElementReferenceExceptionHandling_usingExplicitWait"/>
         </methods>
       </class> <!-- session4.com.testcases.ListenerTest_SuiteLevel -->
     </classes>

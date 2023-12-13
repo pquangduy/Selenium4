@@ -49,7 +49,7 @@ public class ListenerTest_SuiteLevel extends BaseTest {
 		ele = waitForElementPresent(searchInput);
 		ele.sendKeys(expectedInputAfterRefresh);
 		System.out.println("The string entered from Search Input is - " + ele.getAttribute("value"));
-		Assert.assertEquals(ele.getAttribute("value"), expectedInputAfterRefresh);
+		Assert.assertEquals(ele.getAttribute("value"), expectedInputAfterRefresh + "--failed");
 		sleep(1);
 	}
 	

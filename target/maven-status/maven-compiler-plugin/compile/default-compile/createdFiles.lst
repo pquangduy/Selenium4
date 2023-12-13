@@ -7,8 +7,8 @@ selenium4\com\enums\AuthorType.class
 selenium4\com\exceptions\FrameworkException.class
 selenium4\com\helpers\ExcelHelpers$1.class
 selenium4\com\driver\BrowserFactory$4.class
-selenium4\com\helpers\WordHelpers.class
 selenium4\com\helpers\WebElementsHelpers.class
+selenium4\com\listeners\TestAllureListener.class
 selenium4\com\listeners\TestListener.class
 selenium4\com\driver\BrowserFactory$1.class
 selenium4\com\utils\DateUtils.class
@@ -28,6 +28,7 @@ selenium4\com\enums\FailureHandling.class
 selenium4\com\helpers\ExcelHelpers.class
 selenium4\com\helpers\FileHelpers.class
 selenium4\com\utils\DecodeUtils.class
+selenium4\com\reports\AllureManager.class
 selenium4\com\driver\TargetFactory.class
 selenium4\com\exceptions\InvalidPathForExtentReportFileException.class
 selenium4\com\reports\ExtentTestManager.class

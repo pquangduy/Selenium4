@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite, 2 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">6 methods, 1 failed,  2 skipped,  3 passed</span>
+                    <span class="method-stats">5 methods, 2 failed,  1 skipped,  2 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -103,7 +103,12 @@
                     <div class="method-list-content failed suite-Suite">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="session4.com.testcases.ListenerTest" class="method navigator-link" hash-for-method="testElementNotInteractableExceptionHandling_usingSeleniumClick">testElementNotInteractableExceptionHandling_usingSeleniumClick</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="session4.com.testcases.ListenerTest_SuiteLevel" class="method navigator-link" hash-for-method="testStaleElementReferenceExceptionHandling_usingExplicitWait">testStaleElementReferenceExceptionHandling_usingExplicitWait</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="failed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="session4.com.testcases.ListenerTest_ClassLevel" class="method navigator-link" hash-for-method="testTestCase_Fail">testTestCase_Fail</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-Suite -->
@@ -117,12 +122,7 @@
                     <div class="method-list-content skipped suite-Suite">
                       <span>
                         <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="session4.com.testcases.ListenerTest" class="method navigator-link" hash-for-method="testSkipTestCase">testSkipTestCase</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="skipped.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="session4.com.testcases.ListenerTest_SuiteLevel" class="method navigator-link" hash-for-method="testStaleElementReferenceExceptionHandling_skipTestCase">testStaleElementReferenceExceptionHandling_skipTestCase</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-Suite" title="session4.com.testcases.ListenerTest_ClassLevel" class="method navigator-link" hash-for-method="testTestCase_Skip">testTestCase_Skip</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content skipped suite-Suite -->
@@ -136,17 +136,12 @@
                     <div class="method-list-content passed suite-Suite">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="session4.com.testcases.ListenerTest" class="method navigator-link" hash-for-method="testElementNotInteractableExceptionHandling_usingJavascriptClick">testElementNotInteractableExceptionHandling_usingJavascriptClick</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-Suite" title="session4.com.testcases.ListenerTest_SuiteLevel" class="method navigator-link" hash-for-method="testStaleElementReferenceExceptionHandling_usingExplicitWait">testStaleElementReferenceExceptionHandling_usingExplicitWait</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
                         <a href="#" panel-name="suite-Suite" title="session4.com.testcases.ListenerTest_SuiteLevel" class="method navigator-link" hash-for-method="testStaleElementReferenceExceptionHandling_usingTryCatch">testStaleElementReferenceExceptionHandling_usingTryCatch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-Suite" title="session4.com.testcases.ListenerTest_ClassLevel" class="method navigator-link" hash-for-method="testTestCase_Pass">testTestCase_Pass</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-Suite -->
@@ -164,35 +159,57 @@
           <div class="suite-Suite-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">session4.com.testcases.ListenerTest</span>
+              <span class="class-name">session4.com.testcases.ListenerTest_ClassLevel</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testElementNotInteractableExceptionHandling_usingSeleniumClick">
-                  </a> <!-- testElementNotInteractableExceptionHandling_usingSeleniumClick -->
-                  <span class="method-name">testElementNotInteractableExceptionHandling_usingSeleniumClick</span>
+                  <a name="testTestCase_Fail">
+                  </a> <!-- testTestCase_Fail -->
+                  <span class="method-name">testTestCase_Fail</span>
                   <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=119.0.6045.200)
-Build info: version: &apos;4.13.0&apos;, revision: &apos;ba948ece5b*&apos;
+  (Session info: chrome=120.0.6099.71)
+Build info: version: &apos;4.16.1&apos;, revision: &apos;9b4c83354e&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;17.0.6&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [adf06f2c0fb6666cf5d2a1b244087b29, clickElement {id=D3DA15789F5FCDE1DCF4470F7C08D228_element_15}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 119.0.6045.200, chrome: {chromedriverVersion: 119.0.6045.105 (38c72552c5e..., userDataDir: C:\WINDOWS\SystemTemp\scope...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62540}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62540/devtoo..., se:cdpVersion: 119.0.6045.200, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (adf06f2c0fb6666cf5d2a1b244087b29)] -&gt; xpath: //label[@for=&apos;persistent&apos;]//preceding-sibling::input]
-Session ID: adf06f2c0fb6666cf5d2a1b244087b29
+Command: [73a158c32ea2850503653502fd7eb05d, clickElement {id=01684A33FBDD0636D18B8ED7CB5095CF_element_14}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 120.0.6099.71, chrome: {chromedriverVersion: 120.0.6099.71 (9729082fe617..., userDataDir: C:\Users\Lenovo\AppData\Loc...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:52705}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:52705/devtoo..., se:cdpVersion: 120.0.6099.71, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (73a158c32ea2850503653502fd7eb05d)] -&gt; xpath: //label[@for=&apos;persistent&apos;]//preceding-sibling::input]
+Session ID: 73a158c32ea2850503653502fd7eb05d
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:52)
 	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:191)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:196)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:171)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:602)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:200)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:175)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:523)
 	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:224)
 	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:77)
-	at session4.com.testcases.ListenerTest.testElementNotInteractableExceptionHandling_usingSeleniumClick(ListenerTest.java:17)
+	at session4.com.testcases.ListenerTest_ClassLevel.testTestCase_Fail(ListenerTest_ClassLevel.java:24)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 36 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(verifying clicking check box using Selenium)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">session4.com.testcases.ListenerTest_SuiteLevel</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testStaleElementReferenceExceptionHandling_usingExplicitWait">
+                  </a> <!-- testStaleElementReferenceExceptionHandling_usingExplicitWait -->
+                  <span class="method-name">testStaleElementReferenceExceptionHandling_usingExplicitWait</span>
+                  <div class="stack-trace">java.lang.AssertionError: expected [After Refresh--failed] but found [After Refresh]
+	at session4.com.testcases.ListenerTest_SuiteLevel.testStaleElementReferenceExceptionHandling_usingExplicitWait(ListenerTest_SuiteLevel.java:52)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
+... Removed 37 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -201,39 +218,21 @@ Session ID: adf06f2c0fb6666cf5d2a1b244087b29
           <div class="suite-Suite-class-skipped">
             <div class="main-panel-header rounded-window-top">
               <img src="skipped.png"/>
-              <span class="class-name">session4.com.testcases.ListenerTest</span>
+              <span class="class-name">session4.com.testcases.ListenerTest_ClassLevel</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testSkipTestCase">
-                  </a> <!-- testSkipTestCase -->
-                  <span class="method-name">testSkipTestCase</span>
+                  <a name="testTestCase_Skip">
+                  </a> <!-- testTestCase_Skip -->
+                  <span class="method-name">testTestCase_Skip</span>
                   <div class="stack-trace">org.testng.SkipException: Test voluntarily skipped.
-	at session4.com.testcases.ListenerTest.testSkipTestCase(ListenerTest.java:49)
+	at session4.com.testcases.ListenerTest_ClassLevel.testTestCase_Skip(ListenerTest_ClassLevel.java:62)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
 ... Removed 31 stack frames
 </div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-Suite-class-skipped -->
-          <div class="suite-Suite-class-skipped">
-            <div class="main-panel-header rounded-window-top">
-              <img src="skipped.png"/>
-              <span class="class-name">session4.com.testcases.ListenerTest_SuiteLevel</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testStaleElementReferenceExceptionHandling_skipTestCase">
-                  </a> <!-- testStaleElementReferenceExceptionHandling_skipTestCase -->
-                  <span class="method-name">testStaleElementReferenceExceptionHandling_skipTestCase</span>
-                  <div class="stack-trace">org.testng.SkipException: Test voluntarily skipped.
-	at session4.com.testcases.ListenerTest_SuiteLevel.testStaleElementReferenceExceptionHandling_skipTestCase(ListenerTest_SuiteLevel.java:58)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511)
-... Removed 31 stack frames
-</div> <!-- stack-trace -->
+                  <em>
+(verifying skip test case)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -241,14 +240,16 @@ Session ID: adf06f2c0fb6666cf5d2a1b244087b29
           <div class="suite-Suite-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">session4.com.testcases.ListenerTest</span>
+              <span class="class-name">session4.com.testcases.ListenerTest_ClassLevel</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="testElementNotInteractableExceptionHandling_usingJavascriptClick">
-                  </a> <!-- testElementNotInteractableExceptionHandling_usingJavascriptClick -->
-                  <span class="method-name">testElementNotInteractableExceptionHandling_usingJavascriptClick</span>
+                  <a name="testTestCase_Pass">
+                  </a> <!-- testTestCase_Pass -->
+                  <span class="method-name">testTestCase_Pass</span>
+                  <em>
+(verifying clicking check box using Javascript)                  </em>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -259,13 +260,6 @@ Session ID: adf06f2c0fb6666cf5d2a1b244087b29
               <span class="class-name">session4.com.testcases.ListenerTest_SuiteLevel</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="testStaleElementReferenceExceptionHandling_usingExplicitWait">
-                  </a> <!-- testStaleElementReferenceExceptionHandling_usingExplicitWait -->
-                  <span class="method-name">testStaleElementReferenceExceptionHandling_usingExplicitWait</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
               <div class="method">
                 <div class="method-content">
                   <a name="testStaleElementReferenceExceptionHandling_usingTryCatch">
@@ -287,10 +281,11 @@ Session ID: adf06f2c0fb6666cf5d2a1b244087b29
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;selenium4.com.listeners.TestListener&quot;/&gt;
+    &lt;listener class-name=&quot;selenium4.com.listeners.TestAllureListener&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot; verbose=&quot;0&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;session4.com.testcases.ListenerTest&quot;/&gt;
+      &lt;class name=&quot;session4.com.testcases.ListenerTest_ClassLevel&quot;/&gt;
       &lt;class name=&quot;session4.com.testcases.ListenerTest_SuiteLevel&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Test --&gt;
@@ -331,31 +326,27 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(6);
+data.addRows(5);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'testStaleElementReferenceExceptionHandling_usingExplicitWait')
+data.setCell(0, 1, 'testStaleElementReferenceExceptionHandling_usingTryCatch')
 data.setCell(0, 2, 'session4.com.testcases.ListenerTest_SuiteLevel')
-data.setCell(0, 3, 4534);
+data.setCell(0, 3, 5628);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'testStaleElementReferenceExceptionHandling_usingTryCatch')
-data.setCell(1, 2, 'session4.com.testcases.ListenerTest_SuiteLevel')
-data.setCell(1, 3, 4478);
+data.setCell(1, 1, 'testTestCase_Pass')
+data.setCell(1, 2, 'session4.com.testcases.ListenerTest_ClassLevel')
+data.setCell(1, 3, 3927);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'testElementNotInteractableExceptionHandling_usingJavascriptClick')
-data.setCell(2, 2, 'session4.com.testcases.ListenerTest')
-data.setCell(2, 3, 4207);
+data.setCell(2, 1, 'testStaleElementReferenceExceptionHandling_usingExplicitWait')
+data.setCell(2, 2, 'session4.com.testcases.ListenerTest_SuiteLevel')
+data.setCell(2, 3, 3786);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'testElementNotInteractableExceptionHandling_usingSeleniumClick')
-data.setCell(3, 2, 'session4.com.testcases.ListenerTest')
-data.setCell(3, 3, 2302);
+data.setCell(3, 1, 'testTestCase_Fail')
+data.setCell(3, 2, 'session4.com.testcases.ListenerTest_ClassLevel')
+data.setCell(3, 3, 1941);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'testSkipTestCase')
-data.setCell(4, 2, 'session4.com.testcases.ListenerTest')
-data.setCell(4, 3, 4);
-data.setCell(5, 0, 5)
-data.setCell(5, 1, 'testStaleElementReferenceExceptionHandling_skipTestCase')
-data.setCell(5, 2, 'session4.com.testcases.ListenerTest_SuiteLevel')
-data.setCell(5, 3, 3);
+data.setCell(4, 1, 'testTestCase_Skip')
+data.setCell(4, 2, 'session4.com.testcases.ListenerTest_ClassLevel')
+data.setCell(4, 3, 3);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
@@ -386,83 +377,73 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">session4.com.testcases.ListenerTest</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">session4.com.testcases.ListenerTest_ClassLevel</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">createDriver(chrome)</span>
+                <span class="method-name">createDriver</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testElementNotInteractableExceptionHandling_usingJavascriptClick</span>
-                <span class="method-start">1927 ms</span>
+                <span class="method-name">testTestCase_Pass</span>
+                <span class="method-start">2515 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">6145 ms</span>
+                <span class="method-start">6458 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">createDriver(chrome)</span>
-                <span class="method-start">6300 ms</span>
+                <span class="method-name">createDriver</span>
+                <span class="method-start">6601 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">testElementNotInteractableExceptionHandling_usingSeleniumClick</span>
-                <span class="method-start">7048 ms</span>
+                <span class="method-name">testTestCase_Fail</span>
+                <span class="method-start">7362 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">9555 ms</span>
+                <span class="method-start">9887 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">createDriver(chrome)</span>
-                <span class="method-start">9738 ms</span>
+                <span class="method-name">createDriver</span>
+                <span class="method-start">10017 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testSkipTestCase</span>
-                <span class="method-start">10622 ms</span>
+                <span class="method-name">testTestCase_Skip</span>
+                <span class="method-start">10755 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">10709 ms</span>
+                <span class="method-start">10985 ms</span>
               </div> <!-- configuration-method after -->
             </div> <!-- chronological-class -->
             <div class="chronological-class">
               <div class="chronological-class-name">session4.com.testcases.ListenerTest_SuiteLevel</div> <!-- chronological-class-name -->
               <div class="configuration-method before">
-                <span class="method-name">createDriver(chrome)</span>
-                <span class="method-start">10866 ms</span>
+                <span class="method-name">createDriver</span>
+                <span class="method-start">11095 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
-                <span class="method-name">testStaleElementReferenceExceptionHandling_skipTestCase</span>
-                <span class="method-start">12005 ms</span>
-              </div> <!-- test-method -->
-              <div class="configuration-method after">
-                <span class="method-name">closeDriver</span>
-                <span class="method-start">12070 ms</span>
-              </div> <!-- configuration-method after -->
-              <div class="configuration-method before">
-                <span class="method-name">createDriver(chrome)</span>
-                <span class="method-start">12192 ms</span>
-              </div> <!-- configuration-method before -->
-              <div class="test-method">
+                <img src="failed.png">
+                </img>
                 <span class="method-name">testStaleElementReferenceExceptionHandling_usingExplicitWait</span>
-                <span class="method-start">12961 ms</span>
+                <span class="method-start">11836 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">17497 ms</span>
+                <span class="method-start">16105 ms</span>
               </div> <!-- configuration-method after -->
               <div class="configuration-method before">
-                <span class="method-name">createDriver(chrome)</span>
-                <span class="method-start">17622 ms</span>
+                <span class="method-name">createDriver</span>
+                <span class="method-start">16242 ms</span>
               </div> <!-- configuration-method before -->
               <div class="test-method">
                 <span class="method-name">testStaleElementReferenceExceptionHandling_usingTryCatch</span>
-                <span class="method-start">18571 ms</span>
+                <span class="method-start">16963 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-method after">
                 <span class="method-name">closeDriver</span>
-                <span class="method-start">23052 ms</span>
+                <span class="method-start">22593 ms</span>
               </div> <!-- configuration-method after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

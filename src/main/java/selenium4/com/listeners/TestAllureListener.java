@@ -9,17 +9,16 @@ import selenium4.com.helpers.ScreenshotHelpers;
 import selenium4.com.helpers.PropertiesHelpers;
 import selenium4.com.helpers.ScreenRecorderHelpers;
 import selenium4.com.helpers.WebElementsHelpers;
-import selenium4.com.reports.ExtentReportManager;
-import selenium4.com.utils.BrowserInfoUtils;
 import selenium4.com.utils.LogUtils;
-import com.aventstack.extentreports.Status;
+
+import selenium4.com.reports.AllureManager;
 
 import org.testng.*;
 
 import java.awt.*;
 import java.io.IOException;
 
-public class TestListener implements ITestListener, ISuiteListener, IInvokedMethodListener {
+public class TestAllureListener implements ITestListener, ISuiteListener {
 
 	static int count_totalTCs;
 	static int count_passedTCs;
@@ -28,7 +27,7 @@ public class TestListener implements ITestListener, ISuiteListener, IInvokedMeth
 
 	private ScreenRecorderHelpers screenRecorder;
 
-	public TestListener() {
+	public TestAllureListener() {
 		try {
 			screenRecorder = new ScreenRecorderHelpers();
 		} catch (IOException | AWTException e) {
@@ -46,22 +45,10 @@ public class TestListener implements ITestListener, ISuiteListener, IInvokedMeth
 	}
 
 	@Override
-	public void beforeInvocation(IInvokedMethod method, ITestResult testResult) {
-		// Before every method in the Test Class
-		LogUtils.info(" --- Starting: " + method.getTestMethod().getMethodName());
-	}
-
-	@Override
-	public void afterInvocation(IInvokedMethod method, ITestResult testResult) {
-		// After every method in the Test Class
-		LogUtils.info(" --- Ending: " + method.getTestMethod().getMethodName());
-	}
-
-	@Override
 	public void onStart(ISuite iSuite) {
 		System.out.println("========= INSTALLING CONFIGURATION DATA =========");
 		PropertiesHelpers.loadAllFiles();
-		ExtentReportManager.initReports();
+		AllureManager.setAllureEnvironmentInformation();
 		System.out.println("========= INSTALLED CONFIGURATION DATA =========");
 		System.out.println("");
 		LogUtils.info("Starting Suite: " + iSuite.getName());
@@ -71,8 +58,6 @@ public class TestListener implements ITestListener, ISuiteListener, IInvokedMeth
 	public void onFinish(ISuite iSuite) {
 		LogUtils.info("End Suite: " + iSuite.getName());
 		WebElementsHelpers.stopSoftAssertAll();
-		// End Suite and execute Extents Report
-		ExtentReportManager.flushReports();
 	}
 
 	public AuthorType[] getAuthorType(ITestResult iTestResult) {
@@ -99,12 +84,6 @@ public class TestListener implements ITestListener, ISuiteListener, IInvokedMeth
 	public void onTestStart(ITestResult iTestResult) {
 		LogUtils.info("Test case: " + getTestDescription(iTestResult) + " is starting...");
 		count_totalTCs = count_totalTCs + 1;
-
-		ExtentReportManager.createTest(iTestResult.getName());
-		ExtentReportManager.addAuthors(getAuthorType(iTestResult));
-		ExtentReportManager.addCategories(getCategoryType(iTestResult));
-		ExtentReportManager.addDevices();
-		ExtentReportManager.info(BrowserInfoUtils.getOSInfo());
 		if (VIDEO_RECORD.toLowerCase().trim().equals(YES)) {
 			screenRecorder.startRecording(getTestName(iTestResult));
 		}
@@ -114,11 +93,10 @@ public class TestListener implements ITestListener, ISuiteListener, IInvokedMeth
 	public void onTestSuccess(ITestResult iTestResult) {
 		LogUtils.info("Test case: " + getTestDescription(iTestResult) + " is passed.");
 		count_passedTCs = count_passedTCs + 1;
-
 		if (SCREENSHOT_PASSED_STEPS.equals(YES)) {
 			ScreenshotHelpers.captureScreenshot(DriverManager.getDriver(), getTestName(iTestResult));
 		}
-		ExtentReportManager.logMessage(Status.PASS, "Test case: " + getTestName(iTestResult) + " is passed.");
+        AllureManager.saveTextLog("Test case: " + getTestName(iTestResult) + " is passed.");
 		if (VIDEO_RECORD.trim().toLowerCase().equals(YES)) {
 			screenRecorder.stopRecording(true);
 		}
@@ -136,9 +114,9 @@ public class TestListener implements ITestListener, ISuiteListener, IInvokedMeth
 		}
 		LogUtils.error("FAILED !! Screenshot for test case: " + getTestName(iTestResult));
 		LogUtils.error(iTestResult.getThrowable());
-		// Extent report screenshot file and log
-		ExtentReportManager.addScreenShot(Status.FAIL, getTestName(iTestResult));
-		ExtentReportManager.logMessage(Status.FAIL, iTestResult.getThrowable().toString());
+		//Allure Report
+        AllureManager.saveTextLog("Test case: " + getTestName(iTestResult) + " is failed.");
+        AllureManager.takeScreenshotToAttachOnAllureReport();
 	}
 
 	@Override
@@ -148,7 +126,7 @@ public class TestListener implements ITestListener, ISuiteListener, IInvokedMeth
 		if (SCREENSHOT_SKIPPED_STEPS.equals(YES)) {
 			ScreenshotHelpers.captureScreenshot(DriverManager.getDriver(), getTestName(iTestResult));
 		}
-		ExtentReportManager.logMessage(Status.SKIP, "Test case: " + getTestName(iTestResult) + " is skipped.");
+        AllureManager.saveTextLog("Test case: " + getTestName(iTestResult) + " is skipped.");
 		if (VIDEO_RECORD.toLowerCase().trim().equals(YES)) {
 			screenRecorder.stopRecording(true);
 		}
@@ -157,7 +135,5 @@ public class TestListener implements ITestListener, ISuiteListener, IInvokedMeth
 	@Override
 	public void onTestFailedButWithinSuccessPercentage(ITestResult iTestResult) {
 		LogUtils.error("Test failed but it is in defined success ratio: " + getTestDescription(iTestResult));
-		ExtentReportManager
-				.logMessage("Test failed but it is in defined success ratio: " + getTestDescription(iTestResult));
 	}
 }

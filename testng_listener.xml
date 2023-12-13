@@ -2,6 +2,7 @@
 <suite name="Suite">
     <listeners>
         <listener class-name="selenium4.com.listeners.TestListener"></listener>
+        <listener class-name="selenium4.com.listeners.TestAllureListener"></listener>
     </listeners>
     <test name="Test">
         <classes>

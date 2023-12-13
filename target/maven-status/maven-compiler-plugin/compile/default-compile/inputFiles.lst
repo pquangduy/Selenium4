@@ -11,6 +11,7 @@ C:\Users\Lenovo\eclipse-workspace\ArtSelenium4\src\main\java\selenium4\com\utils
 C:\Users\Lenovo\eclipse-workspace\ArtSelenium4\src\main\java\selenium4\com\exceptions\InvalidPathForWordException.java
 C:\Users\Lenovo\eclipse-workspace\ArtSelenium4\src\main\java\selenium4\com\enums\Browser.java
 C:\Users\Lenovo\eclipse-workspace\ArtSelenium4\src\main\java\selenium4\com\utils\DecodeUtils.java
+C:\Users\Lenovo\eclipse-workspace\ArtSelenium4\src\main\java\selenium4\com\listeners\TestAllureListener.java
 C:\Users\Lenovo\eclipse-workspace\ArtSelenium4\src\main\java\selenium4\com\annotations\FrameworkAnnotation.java
 C:\Users\Lenovo\eclipse-workspace\ArtSelenium4\src\main\java\selenium4\com\utils\BrowserInfoUtils.java
 C:\Users\Lenovo\eclipse-workspace\ArtSelenium4\src\main\java\selenium4\com\exceptions\HeadlessNotSupportedException.java
@@ -27,7 +28,6 @@ C:\Users\Lenovo\eclipse-workspace\ArtSelenium4\src\main\java\selenium4\com\drive
 C:\Users\Lenovo\eclipse-workspace\ArtSelenium4\src\main\java\selenium4\com\helpers\FileHelpers.java
 C:\Users\Lenovo\eclipse-workspace\ArtSelenium4\src\main\java\selenium4\com\helpers\ScreenshotHelpers.java
 C:\Users\Lenovo\eclipse-workspace\ArtSelenium4\src\main\java\selenium4\com\helpers\DatabaseHelpers.java
-C:\Users\Lenovo\eclipse-workspace\ArtSelenium4\src\main\java\selenium4\com\helpers\WordHelpers.java
 C:\Users\Lenovo\eclipse-workspace\ArtSelenium4\src\main\java\selenium4\com\driver\DriverManager.java
 C:\Users\Lenovo\eclipse-workspace\ArtSelenium4\src\main\java\selenium4\com\exceptions\InvalidPathForExtentReportFileException.java
 C:\Users\Lenovo\eclipse-workspace\ArtSelenium4\src\main\java\selenium4\com\reports\ExtentReportManager.java
@@ -36,6 +36,7 @@ C:\Users\Lenovo\eclipse-workspace\ArtSelenium4\src\main\java\selenium4\com\liste
 C:\Users\Lenovo\eclipse-workspace\ArtSelenium4\src\main\java\selenium4\com\helpers\Helpers.java
 C:\Users\Lenovo\eclipse-workspace\ArtSelenium4\src\main\java\selenium4\com\utils\ReportUtils.java
 C:\Users\Lenovo\eclipse-workspace\ArtSelenium4\src\main\java\selenium4\com\constants\FrameworkConstants.java
+C:\Users\Lenovo\eclipse-workspace\ArtSelenium4\src\main\java\selenium4\com\reports\AllureManager.java
 C:\Users\Lenovo\eclipse-workspace\ArtSelenium4\src\main\java\selenium4\com\utils\DateUtils.java
 C:\Users\Lenovo\eclipse-workspace\ArtSelenium4\src\main\java\selenium4\com\exceptions\FrameworkException.java
 C:\Users\Lenovo\eclipse-workspace\ArtSelenium4\src\main\java\selenium4\com\helpers\ScreenRecorderHelpers.java

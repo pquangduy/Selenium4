@@ -7,6 +7,8 @@ import com.google.zxing.MultiFormatReader;
 import com.google.zxing.Result;
 import com.google.zxing.client.j2se.BufferedImageLuminanceSource;
 import com.google.zxing.common.HybridBinarizer;
+
+import selenium4.com.reports.AllureManager;
 import io.qameta.allure.Step;
 import selenium4.com.constants.FrameworkConstants;
 import selenium4.com.driver.DriverManager;
@@ -24,8 +26,8 @@ import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.devtools.DevTools;
 import org.openqa.selenium.devtools.HasDevTools;
-import org.openqa.selenium.devtools.v115.network.Network;
-import org.openqa.selenium.devtools.v115.network.model.Headers;
+import org.openqa.selenium.devtools.v120.network.Network;
+import org.openqa.selenium.devtools.v120.network.model.Headers;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.print.PrintOptions;
 import org.openqa.selenium.support.ui.ExpectedCondition;
@@ -38,6 +40,8 @@ import org.testng.asserts.SoftAssert;
 import javax.annotation.Nullable;
 import javax.imageio.ImageIO;
 
+import static selenium4.com.constants.FrameworkConstants.SCREENSHOT_ALL_STEPS;
+import static selenium4.com.constants.FrameworkConstants.YES;
 import static selenium4.com.constants.FrameworkConstants.*;
 
 import java.awt.*;
@@ -51,6 +55,7 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.time.Duration;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 import java.util.*;
 
 /**
@@ -78,8 +83,10 @@ public class WebElementsHelpers {
             if (ExtentTestManager.getExtentTest() != null) {
                 ExtentReportManager.addScreenShot(Helpers.makeSlug(screenshotName));
             }
+            AllureManager.takeScreenshotStep();
         }
     }
+
 
 	public static String getPathDownloadDirectory() {
 		String path = "";
@@ -265,7 +272,8 @@ public class WebElementsHelpers {
 		LogUtils.info("getToUrlAuthentication with Password: " + password);
 		// Load the application url
 		getURL(url);
-		Uninterruptibles.sleepUninterruptibly(Duration.ofSeconds(3));
+		//Uninterruptibles.sleepUninterruptibly(Duration.ofSeconds(3));
+		Uninterruptibles.sleepUninterruptibly(3, TimeUnit.SECONDS);
 	}
 
 	/**
@@ -570,11 +578,11 @@ public class WebElementsHelpers {
 			robot.keyPress(KeyEvent.VK_ENTER);
 			robot.keyRelease(KeyEvent.VK_ENTER);
 		}
-
         LogUtils.info("Upload File with Local Form: " + filePath);
         if (ExtentTestManager.getExtentTest() != null) {
             ExtentReportManager.info("Upload File with Local Form: " + filePath);
         }
+        AllureManager.saveTextLog("Upload File with Local Form: " + filePath);
 	}
 
 	/**
@@ -591,6 +599,7 @@ public class WebElementsHelpers {
         if (ExtentTestManager.getExtentTest() != null) {
             ExtentReportManager.info("Upload File with SendKeys");
         }
+        AllureManager.saveTextLog("Upload File with SendKeys");
 	}
 
 	@Step("Get Current URL")
@@ -600,6 +609,7 @@ public class WebElementsHelpers {
         if (ExtentTestManager.getExtentTest() != null) {
             ExtentReportManager.info("Get Current URL: " + DriverManager.getDriver().getCurrentUrl());
         }
+        AllureManager.saveTextLog("Get Current URL: " + DriverManager.getDriver().getCurrentUrl());
 		return DriverManager.getDriver().getCurrentUrl();
 	}
 
@@ -611,6 +621,7 @@ public class WebElementsHelpers {
         if (ExtentTestManager.getExtentTest() != null) {
             ExtentReportManager.info("Get Page Title: " + DriverManager.getDriver().getTitle());
         }
+        AllureManager.saveTextLog("Get Page Title: " + DriverManager.getDriver().getTitle());
 		return title;
 	}
 
@@ -1009,11 +1020,13 @@ public class WebElementsHelpers {
             if (ExtentTestManager.getExtentTest() != null) {
                 ExtentReportManager.pass("Verify Equals: " + value1 + " = " + value2);
             }
+            AllureManager.saveTextLog("Verify Equals: " + value1 + " = " + value2);
 		} else {
 			LogUtils.info("Verify Equals: " + value1 + " != " + value2);
             if (ExtentTestManager.getExtentTest() != null) {
                 ExtentReportManager.fail("Verify Equals: " + value1 + " != " + value2);
             }
+            AllureManager.saveTextLog("Verify Equals: " + value1 + " != " + value2);
 			Assert.assertEquals(value1, value2, value1 + " != " + value2);
 		}
 		return result;
@@ -1027,11 +1040,13 @@ public class WebElementsHelpers {
             if (ExtentTestManager.getExtentTest() != null) {
                 ExtentReportManager.pass("Verify Equals: " + value1 + " = " + value2);
             }
+            AllureManager.saveTextLog("Verify Equals: " + value1 + " = " + value2);
 		} else {
 			LogUtils.info("Verify Equals: " + value1 + " != " + value2);
             if (ExtentTestManager.getExtentTest() != null) {
                 ExtentReportManager.fail("Verify Equals: " + value1 + " != " + value2);
             }
+            AllureManager.saveTextLog("Verify Equals: " + value1 + " != " + value2);
 			Assert.assertEquals(value1, value2, message);
 		}
 		return result;
@@ -1045,11 +1060,13 @@ public class WebElementsHelpers {
             if (ExtentTestManager.getExtentTest() != null) {
                 ExtentReportManager.pass("Verify Contains: " + value1 + " CONTAINS " + value2);
             }
+            AllureManager.saveTextLog("Verify Contains: " + value1 + "CONTAINS" + value2);
 		} else {
 			LogUtils.info("Verify Contains: " + value1 + " NOT CONTAINS " + value2);
             if (ExtentTestManager.getExtentTest() != null) {
                 ExtentReportManager.fail("Verify Contains: " + value1 + " NOT CONTAINS " + value2);
             }
+            AllureManager.saveTextLog("Verify Contains: " + value1 + " NOT CONTAINS " + value2);
 			Assert.assertEquals(value1, value2, value1 + " NOT CONTAINS " + value2);
 		}
 		return result;
@@ -1063,11 +1080,13 @@ public class WebElementsHelpers {
             if (ExtentTestManager.getExtentTest() != null) {
                 ExtentReportManager.pass("Verify Contains: " + value1 + " CONTAINS " + value2);
             }
+            AllureManager.saveTextLog("Verify Contains: " + value1 + "CONTAINS" + value2);
 		} else {
 			LogUtils.info("Verify Contains: " + value1 + " NOT CONTAINS " + value2);
             if (ExtentTestManager.getExtentTest() != null) {
                 ExtentReportManager.fail("Verify Contains: " + value1 + " NOT CONTAINS " + value2);
             }
+            AllureManager.saveTextLog("Verify Contains: " + value1 + " NOT CONTAINS " + value2);
 			Assert.assertEquals(value1, value2, message);
 		}
 		return result;
@@ -1080,11 +1099,13 @@ public class WebElementsHelpers {
             if (ExtentTestManager.getExtentTest() != null) {
                 ExtentReportManager.pass("Verify TRUE: " + condition);
             }
+            AllureManager.saveTextLog("Verify TRUE: " + condition);
 		} else {
 			LogUtils.info("Verify TRUE: " + condition);
             if (ExtentTestManager.getExtentTest() != null) {
                 ExtentReportManager.fail("Verify TRUE: " + condition);
             }
+            AllureManager.saveTextLog("Verify TRUE: " + condition);
 			Assert.assertTrue(condition, "The condition is FALSE.");
 		}
 		return condition;
@@ -1097,11 +1118,13 @@ public class WebElementsHelpers {
             if (ExtentTestManager.getExtentTest() != null) {
                 ExtentReportManager.pass("Verify TRUE: " + condition);
             }
+            AllureManager.saveTextLog("Verify TRUE: " + condition);
 		} else {
 			LogUtils.info("Verify TRUE: " + condition);
             if (ExtentTestManager.getExtentTest() != null) {
                 ExtentReportManager.fail("Verify TRUE: " + condition);
             }
+            AllureManager.saveTextLog("Verify TRUE: " + condition);
 			Assert.assertTrue(condition, message);
 		}
 		return condition;
@@ -1144,6 +1167,7 @@ public class WebElementsHelpers {
                 ExtentReportManager.warning("Verify text of an element [Equals] - " + result);
                 ExtentReportManager.warning("The actual text is '" + getTextElement(by).trim() + "' not equals expected text '" + text.trim() + "'");
             }
+            AllureManager.saveTextLog("Verify text of an element [Equals] - " + result + ". The actual text is '" + getTextElement(by).trim() + "' not equals '" + text.trim() + "'");
 		}
         addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 		return getTextElement(by).trim().equals(text.trim());
@@ -1153,22 +1177,19 @@ public class WebElementsHelpers {
 	public static boolean verifyElementTextEquals(By by, String text) {
 		smartWait();
 		waitForElementVisible(by);
-
 		boolean result = getTextElement(by).trim().equals(text.trim());
-
 		if (result == true) {
 			LogUtils.info("Verify text of an element [Equals]: " + result);
 		} else {
 			LogUtils.warn("Verify text of an element [Equals]: " + result);
 		}
-
 		Assert.assertEquals(getTextElement(by).trim(), text.trim(),
 				"The actual text is '" + getTextElement(by).trim() + "' not equals '" + text.trim() + "'");
-
         if (ExtentTestManager.getExtentTest() != null) {
             ExtentReportManager.warning("Verify text of an element [Equals] : " + result);
             ExtentReportManager.warning("The actual text is '" + getTextElement(by).trim() + "' not equals '" + text.trim() + "'");
         }
+        AllureManager.saveTextLog("Verify text of an element [Equals] : " + result + ". The actual text is '" + getTextElement(by).trim() + "' not equals '" + text.trim() + "'");
         addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 		return result;
 	}
@@ -1177,15 +1198,12 @@ public class WebElementsHelpers {
 	public static boolean verifyElementTextContains(By by, String text, FailureHandling flowControl) {
 		smartWait();
 		waitForElementVisible(by);
-
 		boolean result = getTextElement(by).trim().contains(text.trim());
-
 		if (result == true) {
 			LogUtils.info("Verify text of an element [Contains]: " + result);
 		} else {
 			LogUtils.warn("Verify text of an element [Contains]: " + result);
 		}
-
 		if (flowControl.equals(FailureHandling.STOP_ON_FAILURE)) {
 			Assert.assertTrue(result,
 					"The actual text is " + getTextElement(by).trim() + " not contains " + text.trim());
@@ -1198,6 +1216,7 @@ public class WebElementsHelpers {
             if (ExtentTestManager.getExtentTest() != null) {
                 ExtentReportManager.warning("Verify text of an element [Contains] - " + result);
             }
+            AllureManager.saveTextLog("Verify text of an element [Contains] - " + result);
         }
         addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 
@@ -1208,20 +1227,17 @@ public class WebElementsHelpers {
 	public static boolean verifyElementTextContains(By by, String text) {
 		smartWait();
 		waitForElementVisible(by);
-
 		boolean result = getTextElement(by).trim().contains(text.trim());
-
 		if (result == true) {
 			LogUtils.info("Verify text of an element [Contains]: " + result);
 		} else {
 			LogUtils.warn("Verify text of an element [Contains]: " + result);
 		}
-
 		Assert.assertTrue(result, "The actual text is " + getTextElement(by).trim() + " not contains " + text.trim());
-
         if (ExtentTestManager.getExtentTest() != null) {
             ExtentReportManager.info("Verify text of an element [Contains] : " + result);
         }
+        AllureManager.saveTextLog("Verify text of an element [Contains] : " + result);
         addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 
 		return result;
@@ -1239,7 +1255,7 @@ public class WebElementsHelpers {
             if (ExtentTestManager.getExtentTest() != null) {
                 ExtentReportManager.info("Verify element clickable " + by);
             }
-            
+            AllureManager.saveTextLog("Verify element clickable " + by);
 			return true;
 		} catch (Exception e) {
 			LogUtils.error(e.getMessage());
@@ -1260,7 +1276,7 @@ public class WebElementsHelpers {
             if (ExtentTestManager.getExtentTest() != null) {
                 ExtentReportManager.info("Verify element clickable " + by);
             }
-
+            AllureManager.saveTextLog("Verify element clickable " + by);
             return true;
 		} catch (Exception e) {
 			LogUtils.error("FAILED. Element not clickable " + by);
@@ -1282,7 +1298,7 @@ public class WebElementsHelpers {
             if (ExtentTestManager.getExtentTest() != null) {
                 ExtentReportManager.info("Verify element clickable " + by);
             }
-
+            AllureManager.saveTextLog("Verify element clickable " + by);
             return true;
 		} catch (Exception e) {
 			LogUtils.error(message);
@@ -1304,8 +1320,8 @@ public class WebElementsHelpers {
             if (ExtentTestManager.getExtentTest() != null) {
                 ExtentReportManager.info("Verify element present " + by);
             }
+            AllureManager.saveTextLog("Verify element present " + by);
             addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
-
             return true;
 		} catch (Exception e) {
 			LogUtils.info("The element does NOT present. " + e.getMessage());
@@ -1325,8 +1341,8 @@ public class WebElementsHelpers {
             if (ExtentTestManager.getExtentTest() != null) {
                 ExtentReportManager.info("Verify element present " + by);
             }
+            AllureManager.saveTextLog("Verify element present " + by);
             addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
-
             return true;
 		} catch (Exception e) {
 			LogUtils.info("The element does NOT present. " + e.getMessage());
@@ -1347,6 +1363,7 @@ public class WebElementsHelpers {
             if (ExtentTestManager.getExtentTest() != null) {
                 ExtentReportManager.info("Verify element present " + by);
             }
+            AllureManager.saveTextLog("Verify element present " + by);
             addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 
             return true;
@@ -1374,6 +1391,7 @@ public class WebElementsHelpers {
             if (ExtentTestManager.getExtentTest() != null) {
                 ExtentReportManager.info("Verify element present " + by);
             }
+            AllureManager.saveTextLog("Verify element present " + by);
             addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 
             return true;
@@ -1908,6 +1926,7 @@ public class WebElementsHelpers {
         if (ExtentTestManager.getExtentTest() != null) {
             ExtentReportManager.pass("Open URL: " + URL);
         }
+        AllureManager.saveTextLog("Open URL: " + URL);
         addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 	}
 
@@ -1925,6 +1944,7 @@ public class WebElementsHelpers {
         if (ExtentTestManager.getExtentTest() != null) {
             ExtentReportManager.pass("Open URL: " + URL);
         }
+        AllureManager.saveTextLog("Open URL: " + URL);
         addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 	}
 
@@ -1941,6 +1961,7 @@ public class WebElementsHelpers {
         if (ExtentTestManager.getExtentTest() != null) {
             ExtentReportManager.pass("Navigate to URL: " + URL);
         }
+        AllureManager.saveTextLog("Navigate to URL: " + URL);
         addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 	}
 
@@ -1958,6 +1979,7 @@ public class WebElementsHelpers {
         if (ExtentTestManager.getExtentTest() != null) {
             ExtentReportManager.pass("Set text " + value + " on " + by.toString());
         }
+        AllureManager.saveTextLog("Set text " + value + " on " + by.toString());
         addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 	}
 
@@ -1965,6 +1987,11 @@ public class WebElementsHelpers {
 	public static void setText(WebElement element, String value) {
 		element.sendKeys(value);
 		LogUtils.info("Set text " + value + " on " + element.toString());
+        if (ExtentTestManager.getExtentTest() != null) {
+            ExtentReportManager.pass("Set text " + value + " on " + element.toString());
+        }
+        AllureManager.saveTextLog("Set text " + value + " on " + element.toString());
+        addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 	}
 
 	/**
@@ -1981,6 +2008,7 @@ public class WebElementsHelpers {
         if (ExtentTestManager.getExtentTest() != null) {
             ExtentReportManager.pass("Set text " + value + " on " + by + " and press key " + keys.name());
         }
+        AllureManager.saveTextLog("Set text " + value + " on " + by + " and press key " + keys.name());
         addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 	}
 
@@ -1998,6 +2026,7 @@ public class WebElementsHelpers {
         if (ExtentTestManager.getExtentTest() != null) {
             ExtentReportManager.pass("Set text on element with JS: " + by);
         }
+        AllureManager.saveTextLog("Set text on element with JS: " + by);
         addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 	}
 
@@ -2013,10 +2042,10 @@ public class WebElementsHelpers {
 		actions.sendKeys(value).perform();
 		sleep(0.5);
 		LogUtils.info("Set text " + value + " on " + by);
-
       if (ExtentTestManager.getExtentTest() != null) {
           ExtentReportManager.pass("Set text " + value + " on " + by);
       }
+      AllureManager.saveTextLog("Set text " + value + " on " + by);
       addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 	}
 
@@ -2033,6 +2062,7 @@ public class WebElementsHelpers {
         if (ExtentTestManager.getExtentTest() != null) {
             ExtentReportManager.pass("Press key " + keys.name() + " on element " + by);
         }
+        AllureManager.saveTextLog("Press key " + keys.name() + " on element " + by);
         addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 	}
 
@@ -2050,6 +2080,7 @@ public class WebElementsHelpers {
         if (ExtentTestManager.getExtentTest() != null) {
             ExtentReportManager.pass("Press key " + keys.name() + " on keyboard");
         }
+        AllureManager.saveTextLog("Press key " + keys.name() + " on keyboard");
         addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 	}
 
@@ -2062,10 +2093,10 @@ public class WebElementsHelpers {
 	public static void clearText(By by) {
 		waitForElementVisible(by).clear();
 		LogUtils.info("Clear text in textbox " + by.toString());
-
         if (ExtentTestManager.getExtentTest() != null) {
             ExtentReportManager.pass("Clear text in textbox " + by.toString());
         }
+        AllureManager.saveTextLog("Clear text in textbox");
         addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 	}
 
@@ -2082,11 +2113,11 @@ public class WebElementsHelpers {
 		// actions.moveToElement(getWebElement(by)).click().build();
 		actions.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).build().perform();
 		actions.sendKeys(Keys.DELETE).build().perform();
-
 		LogUtils.info("Clear text in textbox " + by.toString());
         if (ExtentTestManager.getExtentTest() != null) {
             ExtentReportManager.pass("Clear text in textbox " + by.toString());
         }
+        AllureManager.saveTextLog("Clear text in textbox");
         addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 	}
 
@@ -2101,10 +2132,10 @@ public class WebElementsHelpers {
 		waitForElementVisible(by).clear();
 		waitForElementVisible(by).sendKeys(value);
 		LogUtils.info("Clear and Fill " + value + " on " + by.toString());
-
         if (ExtentTestManager.getExtentTest() != null) {
             ExtentReportManager.pass("Clear and Fill " + value + " on " + by.toString());
         }
+        AllureManager.saveTextLog("Clear and Fill " + value + " on " + by.toString());
         addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 	}
 
@@ -2122,10 +2153,10 @@ public class WebElementsHelpers {
 		sleep(0.5);
 		waitForElementClickable(by).click();
 		LogUtils.info("Clicked on the element " + by.toString());
-
         if (ExtentTestManager.getExtentTest() != null) {
             ExtentReportManager.pass("Clicked on the element " + by.toString());
         }
+        AllureManager.saveTextLog("Clicked on the element " + by.toString());
         addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 	}
 
@@ -2133,10 +2164,10 @@ public class WebElementsHelpers {
 	public static void clickElement(WebElement element) {
 		element.click();
 		LogUtils.info("Clicked on the element " + element.toString());
-
         if (ExtentTestManager.getExtentTest() != null) {
             ExtentReportManager.pass("Clicked on the element " + element.toString());
         }
+        AllureManager.saveTextLog("Clicked on the element " + element.toString());
         addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 	}
 
@@ -2149,10 +2180,10 @@ public class WebElementsHelpers {
 	public static void clickElement(By by, int timeout) {
 		waitForElementVisible(by, timeout).click();
 		LogUtils.info("Clicked on the element " + by.toString());
-
         if (ExtentTestManager.getExtentTest() != null) {
             ExtentReportManager.pass("Clicked on the element " + by.toString());
         }
+        AllureManager.saveTextLog("Clicked on the element " + by.toString());
         addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 	}
 
@@ -2169,11 +2200,11 @@ public class WebElementsHelpers {
 		//js.executeScript("arguments[0].scrollIntoView(true);", getWebElement(by));
 		// Click with JS
 		js.executeScript("arguments[0].click();", getWebElement(by));
-
 		LogUtils.info("Click on element with JS: " + by);
         if (ExtentTestManager.getExtentTest() != null) {
             ExtentReportManager.pass("Click on element with JS: " + by);
         }
+        AllureManager.saveTextLog("Click on element with JS: " + by);
         addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 	}
 
@@ -2190,11 +2221,11 @@ public class WebElementsHelpers {
 				Duration.ofSeconds(FrameworkConstants.WAIT_EXPLICIT), Duration.ofMillis(500));
 		WebElement elementWaited = wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText(linkText)));
 		elementWaited.click();
-
 		LogUtils.info("Click on link text " + linkText);
         if (ExtentTestManager.getExtentTest() != null) {
             ExtentReportManager.pass("Click on link text " + linkText);
         }
+        AllureManager.saveTextLog("Click on link text " + linkText);
         addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 	}
 
@@ -2211,6 +2242,7 @@ public class WebElementsHelpers {
         if (ExtentTestManager.getExtentTest() != null) {
             ExtentReportManager.pass("Right click on element " + by);
         }
+        AllureManager.saveTextLog("Right click on element " + by);
         addScreenshotToReport(Thread.currentThread().getStackTrace()[1].getMethodName() + "_" + DateUtils.getCurrentDateTime());
 	}
 
@@ -2226,6 +2258,8 @@ public class WebElementsHelpers {
 		Actions action = new Actions(DriverManager.getDriver());
 		WebElement e = waitForElementVisible(by);
 		action.moveToElement(e).build().perform();
+        AllureManager.saveTextLog("Get text of element " + by.toString());
+        AllureManager.saveTextLog("==> The Text is: " + waitForElementVisible(by).getText());
 		return e.getText().trim();
 	}
 
@@ -2234,6 +2268,8 @@ public class WebElementsHelpers {
 		smartWait();
 		Actions action = new Actions(DriverManager.getDriver());
 		action.moveToElement(element).build().perform();
+        AllureManager.saveTextLog("Get text of element " + element.toString());
+        AllureManager.saveTextLog("==> The Text is: " + element.getText());
 		return element.getText().trim();
 	}
 
